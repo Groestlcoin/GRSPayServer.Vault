@@ -7,7 +7,7 @@
     <Company>The GRSPayServer Team</Company>
     <Title>GRSPayServer Vault</Title>
     <AssemblyTitle>$(Title)</AssemblyTitle>
-    <TargetName>GRSPayServer.Vault</TargetName>
+    <TargetName>BTCPayServer.Vault</TargetName>
     <Description>Allow web application to access your favorite Groestlcoin hardware wallet</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
