@@ -2,7 +2,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Style>
         <Style.Resources>
-            <SolidColorBrush x:Key="btcpay-color-primary">#329f80</SolidColorBrush>
+            <SolidColorBrush x:Key="btcpay-color-primary">#25a5c2</SolidColorBrush>
             <DrawingGroup x:Key="warning">
                 <DrawingGroup.Children>
                     <GeometryDrawing Brush="#00FFFFFF" Geometry="F1M16,16L0,16 0,0 16,0z" />
@@ -13,7 +13,7 @@
             </DrawingGroup>
             <DrawingGroup x:Key="spinner">
                 <DrawingGroup.Children>
-                    <GeometryDrawing Brush="#329f80">
+                    <GeometryDrawing Brush="#25a5c2">
                         <GeometryDrawing.Geometry>
                             <EllipseGeometry Rect="0 0 20 20"></EllipseGeometry>
                         </GeometryDrawing.Geometry>
