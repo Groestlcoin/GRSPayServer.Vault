@@ -17,7 +17,7 @@
 	<key>CFBundleVersion</key>
 	<string>{VersionPrefix}</string>
 	<key>CFBundleExecutable</key>
-	<string>BTCPayServer.Vault</string>
+	<string>GRSPayServer.Vault</string>
 	<key>CFBundleName</key>
 	<string>{ApplicationName}</string>
 	<key>CFBundleIdentifier</key>
