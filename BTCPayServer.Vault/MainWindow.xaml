@@ -11,7 +11,7 @@
     <StackPanel Name="RootPanel"  Orientation="Vertical">
         <StackPanel Orientation="Horizontal">
             <Image Source="avares://BTCPayServer.Vault/Assets/BTCPayServerVault-256x256.png" Height="128" Width="128"></Image>
-            <TextBlock FontSize="28" VerticalAlignment="Center" HorizontalAlignment="Right">Welcome to BTCPayServer Vault</TextBlock>
+            <TextBlock FontSize="28" VerticalAlignment="Center" HorizontalAlignment="Right">Welcome to GRSPayServer Vault</TextBlock>
         </StackPanel>
         <Separator HorizontalAlignment="Left" Height="3" Background="{DynamicResource btcpay-color-primary}" Width="128" Margin="0,10,0,15"></Separator>
         <DockPanel>
