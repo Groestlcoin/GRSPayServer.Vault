@@ -64,14 +64,3 @@ jobs:
         env:
           PGP_KEY: ${{ secrets.PGP_KEY }}
           AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
-  makerelease:
-    name: makerelease
-    runs-on: macOS-latest
-    needs: [pgpsign]
-    if: startsWith( github.ref, 'refs/tags/')
-    steps:
-      - uses: actions/checkout@v2
-      - run: ./Build/CI/makerelease.sh
-        env:
-          X_GITHUB_TOKEN: ${{ secrets.X_GITHUB_TOKEN }}
-          AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}

@@ -10,10 +10,10 @@ namespace BTCPayServer.Hwi
 	public enum HardwareWalletModels
 	{
 		Unknown,
-		Coldcard,
-		Coldcard_Simulator,
-		DigitalBitBox_01,
-		DigitalBitBox_01_Simulator,
+		//Coldcard,
+		//Coldcard_Simulator,
+		//DigitalBitBox_01,
+		//DigitalBitBox_01_Simulator,
 		KeepKey,
 		KeepKey_Simulator,
 		Ledger_Nano_S,

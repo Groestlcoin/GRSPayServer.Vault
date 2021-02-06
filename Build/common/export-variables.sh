@@ -14,7 +14,7 @@ TITLE="$(cat $PROJECT_FILE | sed -n 's/.*<Title>\(.*\)<\/Title>.*/\1/p')"
 if [ -f "$VERSION_FILE" ]; then
     VERSION="$(cat $VERSION_FILE | sed -n 's/.*<Version>\(.*\)<\/Version>.*/\1/p')"
 fi
-PUBLISH_FOLDER="/source/BTCPayServer.Vault/bin/Release/$FRAMEWORK/$RUNTIME/publish"
+PUBLISH_FOLDER="/source/GRSPayServer.Vault/bin/Release/$FRAMEWORK/$RUNTIME/publish"
 EXECUTABLE="$(cat $PROJECT_FILE | sed -n 's/.*<TargetName>\(.*\)<\/TargetName>.*/\1/p')"
 
 mkdir -p "$DIST"
