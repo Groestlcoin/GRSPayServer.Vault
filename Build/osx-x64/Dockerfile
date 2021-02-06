@@ -7,9 +7,9 @@ RUN apt-get install -y --no-install-recommends imagemagick
 
 RUN apt-get install -y --no-install-recommends git icnsutils
 
-RUN wget -qO /tmp/hwi.tar.gz https://github.com/bitcoin-core/HWI/releases/download/1.2.1/hwi-1.2.1-mac-amd64.tar.gz && \
+RUN wget -qO /tmp/hwi.tar.gz https://github.com/Groestlcoin/HWI/releases/download/1.2.1/hwi-1.2.1-mac-amd64.tar.gz && \
     tar -zxvf /tmp/hwi.tar.gz -C /tmp hwi && \
-    echo "dc516e563db7c0f21b3f017313fc93a2a57f8d614822b8c71f1467a4e5f59dbb /tmp/hwi" | sha256sum -c - && \
+    echo "52186c3f0e888c85b7867e95955d8086bcde87b8ffa4179cdf0f151471bf102a /tmp/hwi" | sha256sum -c - && \
     rm /tmp/hwi.tar.gz
 
 WORKDIR /source
@@ -58,6 +58,6 @@ RUN $EXPORT_VARIABLES && \
     # It is impossible to use create-dmg in shell script, because we can't run Apple scripts without a UI.
     cp -r "$RESOURCES/Metadata/." "$dmgroot" && \
     # We need to cd in "$dmgroot", because tar's -C option always add a root folder to the tar otherwise
-    cd "$dmgroot" && shopt -s dotglob && tar -czf "$DIST/BTCPayServerVault-${RUNTIME}-$VERSION.tar.gz" *
+    cd "$dmgroot" && shopt -s dotglob && tar -czf "$DIST/GRSPayServerVault-${RUNTIME}-$VERSION.tar.gz" *
 
 ENTRYPOINT [ "/bin/bash", "-c", "$EXPORT_VARIABLES && cp $DIST/* /opt/dist/" ]

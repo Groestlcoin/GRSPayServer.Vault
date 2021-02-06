@@ -2,13 +2,13 @@
   <Import Project="Version.csproj" Condition="Exists('Version.csproj')" />
   <PropertyGroup>
     <TargetFrameworks>netstandard2.1;netcoreapp2.1</TargetFrameworks>
-    <Company>BTCPay Server</Company>
-    <Copyright>Copyright © BTCPay Server</Copyright>
-    <Description>A wrapper library around the hwi bitcoin-core project</Description>
-    <PackageTags>bitcoin,hwi</PackageTags>
-    <PackageProjectUrl>https://github.com/btcpayserver/BTCPayServer.Vault</PackageProjectUrl>
+    <Company>GRSPay Server</Company>
+    <Copyright>Copyright © GRSPay Server</Copyright>
+    <Description>A wrapper library around the hwi groestlcoin-core project</Description>
+    <PackageTags>groestlcoin,hwi</PackageTags>
+    <PackageProjectUrl>https://github.com/Groestlcoin/GRSPayServer.Vault</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/btcpayserver/BTCPayServer.Vault</RepositoryUrl>
+    <RepositoryUrl>https://github.com/Groestlcoin/GRSPayServer.Vault</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <LangVersion>8.0</LangVersion>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>

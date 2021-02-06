@@ -5,9 +5,9 @@ RUN apt-get update
 RUN apt-get install -y --no-install-recommends imagemagick
 ###
 
-RUN wget -qO /tmp/hwi.tar.gz https://github.com/bitcoin-core/HWI/releases/download/1.2.1/hwi-1.2.1-linux-amd64.tar.gz && \
+RUN wget -qO /tmp/hwi.tar.gz https://github.com/Groestlcoin/HWI/releases/download/1.2.1/hwi-1.2.1-linux-amd64.tar.gz && \
     tar -zxvf /tmp/hwi.tar.gz -C /tmp hwi && \
-    echo "23ea301117f74561294b5b3ebe1eeb461004aff7e479c4b90a0aaec5924cc677 /tmp/hwi" | sha256sum -c - && \
+    echo "b432635e6f609f7498a696029dd61188ceb5e4776660a3414a528280249aa0f1 /tmp/hwi" | sha256sum -c - && \
     rm /tmp/hwi.tar.gz
 
 SHELL ["/bin/bash", "-c"]
@@ -46,18 +46,18 @@ RUN $EXPORT_VARIABLES && \
         convert -background none -resize "!$size" "BTCPayServerVault.png" "$imagepath/$EXECUTABLE.png"; \
     done && \
     mkdir -p "$debiandir/usr/share/applications" && \
-    cp "$RESOURCES/BTCPayServer.Vault.desktop" "$debiandir/usr/share/applications/" && \
-    replaceProjectVariables "$debiandir/usr/share/applications/BTCPayServer.Vault.desktop" && \
+    cp "$RESOURCES/GRSPayServer.Vault.desktop" "$debiandir/usr/share/applications/" && \
+    replaceProjectVariables "$debiandir/usr/share/applications/GRSPayServer.Vault.desktop" && \
     mkdir -p "$debiandir/lib/udev/rules.d" && \
     cp $RESOURCES/udev/* "$debiandir/lib/udev/rules.d/" && \
     sizeinkb="$(du -k --max-depth=0 $debiandir | cut -f 1)" && \
     sed -i "s/{SIZEINKB}/$sizeinkb/g" "$debiandir/DEBIAN/control" && \
-    dpkg --build "$debiandir" && mv /tmp/debian.deb "$DIST/BTCPayServerVault-$VERSION.deb" && \
+    dpkg --build "$debiandir" && mv /tmp/debian.deb "$DIST/GRSPayServerVault-$VERSION.deb" && \
     ( ! [[ "${PGP_KEY}" ]] || \
     ( \
         echo "$PGP_KEY" | base64 --decode | gpg --import && \
         apt-get install -y debsigs && \
-        debsigs --sign=maint "$DIST/BTCPayServerVault-$VERSION.deb" && \
+        debsigs --sign=maint "$DIST/GRSPayServerVault-$VERSION.deb" && \
         echo "The debian package has been pgp signed" \
     ))
 

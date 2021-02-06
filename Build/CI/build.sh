@@ -7,9 +7,6 @@ DOCKER_BUILD_ARGS=""
 if [[ "$PGP_KEY" ]]; then
      DOCKER_BUILD_ARGS="--build-arg "PGP_KEY=$PGP_KEY""
 fi
-if [[ "$WINDOWS_CERT" ]]; then
-     DOCKER_BUILD_ARGS="$DOCKER_BUILD_ARGS --build-arg "WINDOWS_CERT=$WINDOWS_CERT" --build-arg "WINDOWS_CERT_PASSWORD=$WINDOWS_CERT_PASSWORD""
-fi
 
 docker build -t "$DOCKER_IMAGE_NAME" $DOCKER_BUILD_ARGS -f "Build/$RID/Dockerfile" .
 docker run --rm -v "$(pwd)/dist:/opt/dist" "$DOCKER_IMAGE_NAME"

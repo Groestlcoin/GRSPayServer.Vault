@@ -1,8 +1,8 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1.101 AS builder
 
-RUN wget -qO /tmp/hwi.tar.gz https://github.com/bitcoin-core/HWI/releases/download/1.2.1/hwi-1.2.1-linux-amd64.tar.gz && \
+RUN wget -qO /tmp/hwi.tar.gz https://github.com/Groestlcoin/HWI/releases/download/1.2.1/hwi-1.2.1-linux-amd64.tar.gz && \
     tar -zxvf /tmp/hwi.tar.gz -C /tmp hwi && \
-    echo "23ea301117f74561294b5b3ebe1eeb461004aff7e479c4b90a0aaec5924cc677 /tmp/hwi" | sha256sum -c - && \
+    echo "b432635e6f609f7498a696029dd61188ceb5e4776660a3414a528280249aa0f1 /tmp/hwi" | sha256sum -c - && \
     rm /tmp/hwi.tar.gz
 
 WORKDIR /source
@@ -22,6 +22,6 @@ RUN $EXPORT_VARIABLES && \
     find "$PUBLISH_FOLDER" -type f -exec chmod 644 {} \; && \
     find "$PUBLISH_FOLDER" -type f \( -name 'hwi' -o -name "$EXECUTABLE" \) -exec chmod +x {} \; && \
     # We need to cd in "$PUBLISH_FOLDER", because tar's -C option always add a root folder to the tar otherwise
-    cd "$PUBLISH_FOLDER" && tar -czf "$DIST/BTCPayServerVault-Linux-$VERSION.tar.gz" *
+    cd "$PUBLISH_FOLDER" && tar -czf "$DIST/GRSPayServerVault-Linux-$VERSION.tar.gz" *
 
 ENTRYPOINT [ "/bin/bash", "-c", "$EXPORT_VARIABLES && cp $DIST/* /opt/dist/" ]

@@ -30,10 +30,10 @@
                     <TextBlock>If you accept, the website will be able to:</TextBlock>
                     <TextBlock Text=" "></TextBlock>
                     <TextBlock>• Enumerate hardware wallets plugged to your computer</TextBlock>
-                    <TextBlock>• Enumerate your bitcoin addresses</TextBlock>
+                    <TextBlock>• Enumerate your groestlcoin addresses</TextBlock>
                     <TextBlock>• Request you to confirm the signature of a transaction on your hardware wallet</TextBlock>
                     <TextBlock Text=" "></TextBlock>
-                    <TextBlock>The permission will be in effect until you restart BTCPayServer Vault.</TextBlock>
+                    <TextBlock>The permission will be in effect until you restart GRSPayServer Vault.</TextBlock>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Do you want to grant access to "></TextBlock>
                         <TextBlock FontWeight="Bold" Text="{Binding Origin}"></TextBlock>

@@ -6,9 +6,9 @@ RUN apt-get install -y --no-install-recommends imagemagick
 ###
 
 RUN apt-get install -y --no-install-recommends nsis unzip wine xxd osslsigncode openssl
-RUN wget -qO "/tmp/hwi.zip" https://github.com/bitcoin-core/HWI/releases/download/1.2.1/hwi-1.2.1-windows-amd64.zip && \
+RUN wget -qO "/tmp/hwi.zip" https://github.com/Groestlcoin/HWI/releases/download/1.2.1/hwi-1.2.1-windows-amd64.zip && \
     unzip "/tmp/hwi.zip" -d "/tmp" && \
-    echo "b8b21499592a311cfaa18676280807d6bf674d72cef21409ed265069f6582c1b /tmp/hwi.exe" | sha256sum -c - && \
+    echo "3fc085b8086469c1983f189806f10eadb0f43bc9da75d5fa91f15c292898c6cc /tmp/hwi.exe" | sha256sum -c - && \
     rm "/tmp/hwi.zip" && \
     # Need to setup with rcedit because https://github.com/dotnet/sdk/issues/3943
     # I prebuild the binaries with VS 2019 on commit b807b34a644c86c0b0d89c7f073967e79202731a
@@ -67,30 +67,5 @@ RUN $EXPORT_VARIABLES && \
     "-DPUBLISH_FOLDER=$PUBLISH_FOLDER" \
     "-DRESOURCES=${RESOURCES}" \
     "$RESOURCES/vault.nsis"
-
-ARG WINDOWS_CERT
-ARG WINDOWS_CERT_PASSWORD
-
-# Let's sign the installer if we can
-RUN ! ([[ "$WINDOWS_CERT" ]] && [[ "$WINDOWS_CERT_PASSWORD" ]]) || (\
-        $EXPORT_VARIABLES && cd "$DIST" && \
-        echo "$WINDOWS_CERT" | base64 --decode > codesign.pfx && \
-        openssl pkcs12 -in codesign.pfx -nocerts \
-            -passin "pass:$WINDOWS_CERT_PASSWORD" -passout "pass:$WINDOWS_CERT_PASSWORD" \
-            -out codesign.key && \
-        openssl pkcs12 -in codesign.pfx -clcerts -nokeys \
-            -passin "pass:$WINDOWS_CERT_PASSWORD" \
-            -out codesign.crt && \
-        installer_file="$(ls -1 *.exe)" && \
-        intaller_file_signed="${installer_file}.signed" && \
-        osslsigncode sign -certs "codesign.crt" -t "http://timestamp.comodoca.com" \
-                        -pass "$WINDOWS_CERT_PASSWORD" \
-                        -in "$installer_file" -out "$intaller_file_signed" \
-                        -key "codesign.key" && \
-        rm codesign.key codesign.pfx "$installer_file" && \
-        mv "$intaller_file_signed" "$installer_file" && \
-        chmod 777 "codesign.crt" && \
-        echo "Installer successfully signed" \
-    )
 
 ENTRYPOINT [ "/bin/bash", "-c", "$EXPORT_VARIABLES && cp $DIST/* /opt/dist/" ]

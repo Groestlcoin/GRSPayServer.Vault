@@ -1,10 +1,10 @@
 Package: {EXECUTABLE}
 Priority: optional
 Section: utils
-Maintainer: Nicolas Dorier <nicolas.dorier@gmail.com>
+Maintainer: Jackie <jackielove4u@hotmail.com>
 Version: {VERSION}
-Vcs-Git: git://github.com/btcpayserver/BTCPayServer.Vault.git
-Vcs-Browser: https://github.com/btcpayserver/BTCPayServer.Vault
+Vcs-Git: git://github.com/Groestlcoin/GRSPayServer.Vault.git
+Vcs-Browser: https://github.com/Groestlcoin/GRSPayServer.Vault
 Architecture: amd64
 License: Open Source (MIT)
 Installed-Size: {SIZEINKB}

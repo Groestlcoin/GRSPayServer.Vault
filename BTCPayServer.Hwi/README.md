@@ -1,5 +1,3 @@
-[![NuGet](https://img.shields.io/nuget/v/BTCPayServer.Hwi.svg)](https://www.nuget.org/packages/BTCPayServer.Hwi) 
-
 ## How to use BTCPayServer.Hwi
 
 First, you need to reference the [nuget package](https://www.nuget.org/packages/BTCPayServer.Hwi) in your project.

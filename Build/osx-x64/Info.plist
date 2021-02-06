@@ -21,7 +21,7 @@
 	<key>CFBundleName</key>
 	<string>{ApplicationName}</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.btcpayserver.vault</string>
+	<string>org.grspayserver.vault</string>
 	<key>NSHighResolutionCapable</key>
 	<true/>
 	<key>NSAppleScriptEnabled</key>

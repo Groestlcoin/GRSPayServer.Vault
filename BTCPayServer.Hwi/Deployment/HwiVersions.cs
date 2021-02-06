@@ -15,109 +15,24 @@ namespace BTCPayServer.Hwi.Deployment
 {
     public class HwiVersions
     {
-        public static HwiVersion v1_0_3 { get; } = new HwiVersion()
-        {
-            Windows = new HwiDownloadInfo()
-            {
-                Link = "https://github.com/bitcoin-core/HWI/releases/download/1.0.3/hwi-1.0.3-windows-amd64.zip",
-                Hash = "f52ec4c8dd2dbef4aabe28d8a49580bceb54fd609b84c753d6354eeecbd6dc7a",
-                Extractor = new ZipExtractor()
-            },
-            Linux = new HwiDownloadInfo()
-            {
-                Link = "https://github.com/bitcoin-core/HWI/releases/download/1.0.3/hwi-1.0.3-linux-amd64.tar.gz",
-                Hash = "00cb4b2c6eb78d848124e1c3707bdae9c95667f1397dd32cf3b51b579b3a010a",
-                Extractor = new TarExtractor()
-            },
-            Mac = new HwiDownloadInfo()
-            {
-                Link = "https://github.com/bitcoin-core/HWI/releases/download/1.0.3/hwi-1.0.3-mac-amd64.tar.gz",
-                Hash = "b0219f4f51d74e4525dd57a19f1aee9df409a879e041ea65f2d70cf90ac48a32",
-                Extractor = new TarExtractor()
-            }
-        };
-
-        public static HwiVersion v1_1_0 { get; } = new HwiVersion()
-        {
-            Windows = new HwiDownloadInfo()
-            {
-                Link = "https://github.com/bitcoin-core/HWI/releases/download/1.1.0/hwi-1.1.0-windows-amd64.zip",
-                Hash = "cabf83aad91c44c78f6830c31309b9cfa61b900d27c1beb5ee07152e66167853",
-                Extractor = new ZipExtractor()
-            },
-            Linux = new HwiDownloadInfo()
-            {
-                Link = "https://github.com/bitcoin-core/HWI/releases/download/1.1.0/hwi-1.1.0-linux-amd64.tar.gz",
-                Hash = "1e98a59ee0b99ccac7ec6a62e55bf9fa88650250009aecba50fd10468031ed01",
-                Extractor = new TarExtractor()
-            },
-            Mac = new HwiDownloadInfo()
-            {
-                Link = "https://github.com/bitcoin-core/HWI/releases/download/1.1.0/hwi-1.1.0-mac-amd64.tar.gz",
-                Hash = "195d61bb941b6e2e6aab229f16a039f207407f80e628297b8a0cb85228e754ea",
-                Extractor = new TarExtractor()
-            }
-        };
-        public static HwiVersion v1_1_1 { get; } = new HwiVersion()
-        {
-            Windows = new HwiDownloadInfo()
-            {
-                Link = "https://github.com/bitcoin-core/HWI/releases/download/1.1.1/hwi-1.1.1-windows-amd64.zip",
-                Hash = "c36bd39635097c4fa952aceca3f4c7c74be2035a31c39a10a33dae53996630aa",
-                Extractor = new ZipExtractor()
-            },
-            Linux = new HwiDownloadInfo()
-            {
-                Link = "https://github.com/bitcoin-core/HWI/releases/download/1.1.1/hwi-1.1.1-linux-amd64.tar.gz",
-                Hash = "e786797701e454415ed170ee9aed4c81a33f1adef6821bb4bd0f92d1df9d3b23",
-                Extractor = new TarExtractor()
-            },
-            Mac = new HwiDownloadInfo()
-            {
-                Link = "https://github.com/bitcoin-core/HWI/releases/download/1.1.1/hwi-1.1.1-mac-amd64.tar.gz",
-                Hash = "1f48ac21c42579aa88c98e02571ed4d2dfa48f973cd6904984bc9a8b304816ad",
-                Extractor = new TarExtractor()
-            }
-        };
         public static HwiVersion v1_1_2 { get; } = new HwiVersion()
         {
             Windows = new HwiDownloadInfo()
             {
-                Link = "https://github.com/bitcoin-core/HWI/releases/download/1.1.2/hwi-1.1.2-windows-amd64.zip",
-                Hash = "0f3fb7c89740ac2cf245bb8e743c5dd7e686efbda8c4a288869621a63bc32ced",
+                Link = "https://github.com/Groestlcoin/HWI/releases/download/1.1.2/hwi-1.1.2-windows-amd64.zip",
+                Hash = "42797941cb126bc8b50ccd8001fb3db7c216ac30795876fba0b734c03234e2ae",
                 Extractor = new ZipExtractor()
             },
             Linux = new HwiDownloadInfo()
             {
-                Link = "https://github.com/bitcoin-core/HWI/releases/download/1.1.2/hwi-1.1.2-linux-amd64.tar.gz",
-                Hash = "fd6cca20aaa24f4ae4332ca01f1d4c2711247e3ccb8bbea44ee93456f211ea4b",
+                Link = "https://github.com/Groestlcoin/HWI/releases/download/1.1.2/hwi-1.1.2-linux-amd64.tar.gz",
+                Hash = "aa3fc5947305e2348d163d2a704a0836c3ce1dd930a55203004f1ef03c983aac",
                 Extractor = new TarExtractor()
             },
             Mac = new HwiDownloadInfo()
             {
-                Link = "https://github.com/bitcoin-core/HWI/releases/download/1.1.2/hwi-1.1.2-mac-amd64.tar.gz",
-                Hash = "630aef7a02cbc08fae95e79bb9c01684650426a6f8e5383cfb040093b05aa0f1",
-                Extractor = new TarExtractor()
-            }
-        };
-        public static HwiVersion v1_2_0 { get; } = new HwiVersion()
-        {
-            Windows = new HwiDownloadInfo()
-            {
-                Link = "https://github.com/bitcoin-core/HWI/releases/download/1_2_0/hwi-1_2_0-windows-amd64.zip",
-                Hash = "599dde27eb97cf48d9fe6395e1158cc471bdf6168228facbb9d7090ce9e14634",
-                Extractor = new ZipExtractor()
-            },
-            Linux = new HwiDownloadInfo()
-            {
-                Link = "https://github.com/bitcoin-core/HWI/releases/download/1_2_0/hwi-1_2_0-linux-amd64.tar.gz",
-                Hash = "92c263bd2e5c41a533972900e856e0ee9a004ad507024b38462c69afae361cea",
-                Extractor = new TarExtractor()
-            },
-            Mac = new HwiDownloadInfo()
-            {
-                Link = "https://github.com/bitcoin-core/HWI/releases/download/1_2_0/hwi-1_2_0-mac-amd64.tar.gz",
-                Hash = "96437674a1bec7ee87aced6f429c9adcf74a749f41f3355cf1d5adb859fa4304",
+                Link = "https://github.com/Groestlcoin/HWI/releases/download/1.1.2/hwi-1.1.2-mac-amd64.tar.gz",
+                Hash = "feb8a7bf10ed8a5e775811b8a7ce887437fd5dc8039272f48ecb888b17c59cd5",
                 Extractor = new TarExtractor()
             }
         };
@@ -125,20 +40,20 @@ namespace BTCPayServer.Hwi.Deployment
         {
             Windows = new HwiDownloadInfo()
             {
-                Link = "https://github.com/bitcoin-core/HWI/releases/download/1_2_1/hwi-1_2_1-windows-amd64.zip",
-                Hash = "b8b21499592a311cfaa18676280807d6bf674d72cef21409ed265069f6582c1b",
+                Link = "https://github.com/Groestlcoin/HWI/releases/download/1_2_1/hwi-1_2_1-windows-amd64.zip",
+                Hash = "3fc085b8086469c1983f189806f10eadb0f43bc9da75d5fa91f15c292898c6cc",
                 Extractor = new ZipExtractor()
             },
             Linux = new HwiDownloadInfo()
             {
-                Link = "https://github.com/bitcoin-core/HWI/releases/download/1_2_1/hwi-1_2_1-linux-amd64.tar.gz",
-                Hash = "23ea301117f74561294b5b3ebe1eeb461004aff7e479c4b90a0aaec5924cc677",
+                Link = "https://github.com/Groestlcoin/HWI/releases/download/1_2_1/hwi-1_2_1-linux-amd64.tar.gz",
+                Hash = "b432635e6f609f7498a696029dd61188ceb5e4776660a3414a528280249aa0f1",
                 Extractor = new TarExtractor()
             },
             Mac = new HwiDownloadInfo()
             {
-                Link = "https://github.com/bitcoin-core/HWI/releases/download/1_2_1/hwi-1_2_1-mac-amd64.tar.gz",
-                Hash = "dc516e563db7c0f21b3f017313fc93a2a57f8d614822b8c71f1467a4e5f59dbb",
+                Link = "https://github.com/Groestlcoin/HWI/releases/download/1_2_1/hwi-1_2_1-mac-amd64.tar.gz",
+                Hash = "52186c3f0e888c85b7867e95955d8086bcde87b8ffa4179cdf0f151471bf102a",
                 Extractor = new TarExtractor()
             }
         };
