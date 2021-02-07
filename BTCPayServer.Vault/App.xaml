@@ -4,6 +4,6 @@
     <Application.Styles>
         <StyleInclude Source="avares://Avalonia.Themes.Default/DefaultTheme.xaml"/>
         <StyleInclude Source="avares://Avalonia.Themes.Default/Accents/BaseLight.xaml"/>
-        <StyleInclude Source="avares://BTCPayServer.Vault/Styles.xaml" />
+        <StyleInclude Source="avares://GRSPayServer.Vault/Styles.xaml" />
     </Application.Styles>
 </Application>
