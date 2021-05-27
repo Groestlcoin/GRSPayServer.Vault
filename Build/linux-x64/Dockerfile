@@ -2,7 +2,7 @@ FROM mcr.microsoft.com/dotnet/core/sdk:3.1.101 AS builder
 
 RUN wget -qO /tmp/hwi.tar.gz https://github.com/Groestlcoin/HWI/releases/download/2.0.1/hwi-2.0.1-linux-amd64.tar.gz && \
     tar -zxvf /tmp/hwi.tar.gz -C /tmp hwi && \
-    echo "3796e0d74238ee3ddc90ca419a7ddf392721c0c455f4578ed5381e0db36a82ba /tmp/hwi" | sha256sum -c - && \
+    echo "2061905cb89c8d4fdb105ab6af846239b62ca39a0cce8a33759bf23248c132a4 /tmp/hwi" | sha256sum -c - && \
     rm /tmp/hwi.tar.gz
 
 WORKDIR /source

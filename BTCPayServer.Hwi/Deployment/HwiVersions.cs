@@ -20,19 +20,19 @@ namespace BTCPayServer.Hwi.Deployment
             Windows = new HwiDownloadInfo()
             {
                 Link = "https://github.com/Groestlcoin/HWI/releases/download/2.0.1/hwi-2.0.1-windows-amd64.zip",
-                Hash = "2cfdd6ae51e345f8c70214d626430c8d236336688a87f7d85fc6f3d6a8392da8",
+                Hash = "9f7ee46873f34afb19f20e88e27add4a1a1fa30796beded7dbbee9aaad61fb29",
                 Extractor = new ZipExtractor()
             },
             Linux = new HwiDownloadInfo()
             {
                 Link = "https://github.com/Groestlcoin/HWI/releases/download/2.0.1/hwi-2.0.1-linux-amd64.tar.gz",
-                Hash = "7aefba163b12970f6f538592a6c8943b72f23b22a5baedd1cf4fcfd07b1876e6",
+                Hash = "2061905cb89c8d4fdb105ab6af846239b62ca39a0cce8a33759bf23248c132a4",
                 Extractor = new TarExtractor()
             },
             Mac = new HwiDownloadInfo()
             {
                 Link = "https://github.com/Groestlcoin/HWI/releases/download/2_0_1/hwi-2_0_1-mac-amd64.tar.gz",
-                Hash = "96bce6742cf12e7051158a8c90961aa077e183679453aa1f5a29ac1795d0e241",
+                Hash = "d6aba09e984c5e927a758f7ff2ac04795c8b3489090e6eaef3fce1e00f7473f8",
                 Extractor = new TarExtractor()
             }
         };

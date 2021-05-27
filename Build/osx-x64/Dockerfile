@@ -9,7 +9,7 @@ RUN apt-get install -y --no-install-recommends git icnsutils
 
 RUN wget -qO /tmp/hwi.tar.gz https://github.com/Groestlcoin/HWI/releases/download/2.0.1/hwi-2.0.1-mac-amd64.tar.gz && \
     tar -zxvf /tmp/hwi.tar.gz -C /tmp hwi && \
-    echo "96bce6742cf12e7051158a8c90961aa077e183679453aa1f5a29ac1795d0e241 /tmp/hwi" | sha256sum -c - && \
+    echo "d6aba09e984c5e927a758f7ff2ac04795c8b3489090e6eaef3fce1e00f7473f8 /tmp/hwi" | sha256sum -c - && \
     rm /tmp/hwi.tar.gz
 
 WORKDIR /source
